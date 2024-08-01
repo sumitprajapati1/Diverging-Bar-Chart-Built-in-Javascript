@@ -44,7 +44,39 @@
                 [140, 17, "2022-26"]
 
             ];
-        
+            var createSeries = function (number , name )
+            {
+                var data=[];
+                for ( var i=0 ;i<winlossData.length; i++)
+                {
+                    var value=winlossData[i][number];
+                    var center =0;
+                    if(name==="wins")
+                    {
+                        data.push(
+                           {
+                            x:winlossData[i][2],
+                            low:center,
+                            high:center+value,
+                            value:value
+                           }
+                        );
+                    }
+                    else
+                    {
+                        data.push(
+                            {
+                                x:winlossData[i][2],
+                                low:-center,
+                                hight:-center-low,
+                                value:value
+                            }
+                        );
+                    }
+                }
+            }
+            var series=chart.rangeBar(data);
+            series.name(name);
     });
     </script>
 </body>
