@@ -12,9 +12,40 @@
             padding: 0%;
         }
     </style>
-    <script src="https://cdn.anychart.com/releases/8.12.1/js/anychart-bundle.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.12.1/js/anychart-bundle.min.js"> </script>
 </head>
 <body>
     <div id="container"> </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',function()
+    {
+        var chart=anychart.pie();
+        var winlossData = [
+            // This is a Win Loss Data of Indian Cricket Team in given period of five years. 
+        
+                [1, 1, "1932-36"],
+                [2, 1, "1937-41"],
+                [4, 3, "1942-46"],
+                [5, 4, "1947-51"],
+                [5, 5, "1952-56"],
+                [7, 5, "1957-61"],
+                [8, 5, "1962-66"],
+                [13, 8, "1967-71"],
+                [18, 10, "1972-76"],
+                [20, 11, "1977-81"],
+                [22, 10, "1982-86"],
+                [30, 8, "1987-91"],
+                [33, 11, "1992-96"],
+                [51, 14, "1997-01"],
+                [62, 14, "2002-06"],
+                [89, 18, "2007-11"],
+                [116, 21, "2012-16"],
+                [133, 19, "2017-21"],
+                [140, 17, "2022-26"]
+
+            ];
+        
+    });
+    </script>
 </body>
 </html>
